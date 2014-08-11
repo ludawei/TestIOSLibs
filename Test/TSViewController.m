@@ -9,8 +9,12 @@
 #import "TSViewController.h"
 #import "BFPaperCheckbox.h"
 #import "UIColor+BFPaperColors.h"
+#import "TSView.h"
+#import "AFViewShaker.h"
 
 @interface TSViewController ()<BFPaperCheckboxDelegate>
+
+@property (nonatomic,strong) AFViewShaker * viewShaker;
 
 @end
 
@@ -37,6 +41,12 @@
     paperCheckbox2.tapCircleNegativeColor = [UIColor clearColor];   // We could use [UIColor colorWithAlphaComponent] here to make a better tap-circle.
     paperCheckbox2.checkmarkColor = [UIColor paperColorLightBlue];
     [self.view addSubview:paperCheckbox2];
+    
+    TSView *tv = [TSView loadFromXib];
+    tv.center = CGPointMake(100, 400);
+    [self.view addSubview:tv];
+    
+    self.viewShaker = [[AFViewShaker alloc] initWithView:self.view];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,8 +57,15 @@
 
 - (IBAction)onclcko {
     //  [alert show];
-    NSArray *arry=[NSArray arrayWithObject:@"sss"];
-    NSLog(@"%@",[arry objectAtIndex:1]);
+#if 0
+    [self.viewShaker shakeWithDuration:0.6 completion:^{
+        NSLog(@"!");
+    }];
+#else
+    [self.viewShaker shake];
+#endif
+//    NSArray *arry=[NSArray arrayWithObject:@"sss"];
+//    NSLog(@"%@",[arry objectAtIndex:1]);
 }
 
 #pragma mark - BFPaperCheckbox Delegate

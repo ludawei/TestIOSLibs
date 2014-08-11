@@ -1,1 +1,19 @@
+PODS:
+  - AFViewShaker (0.0.2)
+  - FastAnimationWithPOP (0.0.2):
+    - pop (~> 1.0.5)
+  - pop (1.0.6)
+  - Reveal-iOS-SDK (1.0.4)
+
+DEPENDENCIES:
+  - AFViewShaker (~> 0.0.2)
+  - FastAnimationWithPOP (~> 0.0.2)
+  - Reveal-iOS-SDK
+
+SPEC CHECKSUMS:
+  AFViewShaker: 40bd7a2725ea81a9472134f27f0086d398d1bf91
+  FastAnimationWithPOP: 453cac7e3671d27c57db04abec4f6c08a930f413
+  pop: e518794da38942c05255eb64b36d894e70cb4f00
+  Reveal-iOS-SDK: d3c8e109d42219daaa7a6e1ad2de34f0bdbb7a88
+
 COCOAPODS: 0.33.1

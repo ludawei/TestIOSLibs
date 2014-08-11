@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CA94E7DC9EC4A1583DC6A99 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5E8FFC218D4743BF9F1A2B /* libPods.a */; };
 		EE281AD7198A5F6F00F37208 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE281AD6198A5F6F00F37208 /* Foundation.framework */; };
 		EE281AD9198A5F6F00F37208 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE281AD8198A5F6F00F37208 /* CoreGraphics.framework */; };
 		EE281ADB198A5F6F00F37208 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE281ADA198A5F6F00F37208 /* UIKit.framework */; };
@@ -22,8 +23,14 @@
 		EE281B00198A5F6F00F37208 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE281AFE198A5F6F00F37208 /* InfoPlist.strings */; };
 		EE281B02198A5F6F00F37208 /* TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE281B01198A5F6F00F37208 /* TestTests.m */; };
 		EE281B0D198A5F9E00F37208 /* TSUncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = EE281B0C198A5F9E00F37208 /* TSUncaughtExceptionHandler.m */; };
+		EE85FA261998C14B00A4E99D /* TSAnimViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE85FA251998C14B00A4E99D /* TSAnimViewController.m */; };
 		EE9CA17A1991D38600A713BA /* BFPaperCheckbox.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9CA1791991D38600A713BA /* BFPaperCheckbox.m */; };
 		EE9CA17D1991D3F200A713BA /* UIColor+BFPaperColors.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9CA17C1991D3F200A713BA /* UIColor+BFPaperColors.m */; };
+		EE9CA1801993786600A713BA /* TSCollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9CA17F1993786600A713BA /* TSCollViewController.m */; };
+		EE9CA18319937A8500A713BA /* TSCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9CA18219937A8500A713BA /* TSCollectionViewLayout.m */; };
+		EEB3C8CF1994E02B0004377C /* UIView+LoadFromNib.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB3C8CE1994E02B0004377C /* UIView+LoadFromNib.m */; };
+		EEBAB1FB199859D60021D093 /* TSView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBAB1F9199859D60021D093 /* TSView.m */; };
+		EEBAB1FC199859D60021D093 /* TSView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEBAB1FA199859D60021D093 /* TSView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		201FE8389B3D438CB2411CE4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		EB5E8FFC218D4743BF9F1A2B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE281AD3198A5F6F00F37208 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE281AD6198A5F6F00F37208 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EE281AD8198A5F6F00F37208 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -58,10 +67,21 @@
 		EE281B01198A5F6F00F37208 /* TestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTests.m; sourceTree = "<group>"; };
 		EE281B0B198A5F9E00F37208 /* TSUncaughtExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSUncaughtExceptionHandler.h; sourceTree = "<group>"; };
 		EE281B0C198A5F9E00F37208 /* TSUncaughtExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSUncaughtExceptionHandler.m; sourceTree = "<group>"; };
+		EE85FA241998C14B00A4E99D /* TSAnimViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSAnimViewController.h; sourceTree = "<group>"; };
+		EE85FA251998C14B00A4E99D /* TSAnimViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSAnimViewController.m; sourceTree = "<group>"; };
 		EE9CA1781991D38600A713BA /* BFPaperCheckbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFPaperCheckbox.h; sourceTree = "<group>"; };
 		EE9CA1791991D38600A713BA /* BFPaperCheckbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFPaperCheckbox.m; sourceTree = "<group>"; };
 		EE9CA17B1991D3F200A713BA /* UIColor+BFPaperColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+BFPaperColors.h"; sourceTree = "<group>"; };
 		EE9CA17C1991D3F200A713BA /* UIColor+BFPaperColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BFPaperColors.m"; sourceTree = "<group>"; };
+		EE9CA17E1993786600A713BA /* TSCollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCollViewController.h; sourceTree = "<group>"; };
+		EE9CA17F1993786600A713BA /* TSCollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCollViewController.m; sourceTree = "<group>"; };
+		EE9CA18119937A8500A713BA /* TSCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCollectionViewLayout.h; sourceTree = "<group>"; };
+		EE9CA18219937A8500A713BA /* TSCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCollectionViewLayout.m; sourceTree = "<group>"; };
+		EEB3C8CD1994E02B0004377C /* UIView+LoadFromNib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LoadFromNib.h"; sourceTree = "<group>"; };
+		EEB3C8CE1994E02B0004377C /* UIView+LoadFromNib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LoadFromNib.m"; sourceTree = "<group>"; };
+		EEBAB1F8199859D60021D093 /* TSView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSView.h; sourceTree = "<group>"; };
+		EEBAB1F9199859D60021D093 /* TSView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSView.m; sourceTree = "<group>"; };
+		EEBAB1FA199859D60021D093 /* TSView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +92,7 @@
 				EE281AD9198A5F6F00F37208 /* CoreGraphics.framework in Frameworks */,
 				EE281ADB198A5F6F00F37208 /* UIKit.framework in Frameworks */,
 				EE281AD7198A5F6F00F37208 /* Foundation.framework in Frameworks */,
+				1CA94E7DC9EC4A1583DC6A99 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +117,7 @@
 				EE281AFB198A5F6F00F37208 /* TestTests */,
 				EE281AD5198A5F6F00F37208 /* Frameworks */,
 				EE281AD4198A5F6F00F37208 /* Products */,
+				201FE8389B3D438CB2411CE4 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +137,7 @@
 				EE281AD8198A5F6F00F37208 /* CoreGraphics.framework */,
 				EE281ADA198A5F6F00F37208 /* UIKit.framework */,
 				EE281AF5198A5F6F00F37208 /* XCTest.framework */,
+				EB5E8FFC218D4743BF9F1A2B /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -122,6 +145,8 @@
 		EE281ADC198A5F6F00F37208 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				EEB3C8CD1994E02B0004377C /* UIView+LoadFromNib.h */,
+				EEB3C8CE1994E02B0004377C /* UIView+LoadFromNib.m */,
 				EE281AE5198A5F6F00F37208 /* TSAppDelegate.h */,
 				EE281AE6198A5F6F00F37208 /* TSAppDelegate.m */,
 				EE281AE8198A5F6F00F37208 /* Main.storyboard */,
@@ -131,6 +156,15 @@
 				EE281ADD198A5F6F00F37208 /* Supporting Files */,
 				EE281B0B198A5F9E00F37208 /* TSUncaughtExceptionHandler.h */,
 				EE281B0C198A5F9E00F37208 /* TSUncaughtExceptionHandler.m */,
+				EE9CA17E1993786600A713BA /* TSCollViewController.h */,
+				EE9CA17F1993786600A713BA /* TSCollViewController.m */,
+				EE9CA18119937A8500A713BA /* TSCollectionViewLayout.h */,
+				EE9CA18219937A8500A713BA /* TSCollectionViewLayout.m */,
+				EEBAB1F8199859D60021D093 /* TSView.h */,
+				EEBAB1F9199859D60021D093 /* TSView.m */,
+				EEBAB1FA199859D60021D093 /* TSView.xib */,
+				EE85FA241998C14B00A4E99D /* TSAnimViewController.h */,
+				EE85FA251998C14B00A4E99D /* TSAnimViewController.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -182,9 +216,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE281B05198A5F6F00F37208 /* Build configuration list for PBXNativeTarget "Test" */;
 			buildPhases = (
+				F582C9BF89CE495C8C98A660 /* Check Pods Manifest.lock */,
 				EE281ACF198A5F6F00F37208 /* Sources */,
 				EE281AD0198A5F6F00F37208 /* Frameworks */,
 				EE281AD1198A5F6F00F37208 /* Resources */,
+				79FE340A8B3A4D588E60C18B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,6 +290,7 @@
 			files = (
 				EE281AEF198A5F6F00F37208 /* Images.xcassets in Resources */,
 				EE281AE1198A5F6F00F37208 /* InfoPlist.strings in Resources */,
+				EEBAB1FC199859D60021D093 /* TSView.xib in Resources */,
 				EE281AEA198A5F6F00F37208 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,17 +305,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		79FE340A8B3A4D588E60C18B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F582C9BF89CE495C8C98A660 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EE281ACF198A5F6F00F37208 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EE9CA17D1991D3F200A713BA /* UIColor+BFPaperColors.m in Sources */,
+				EE85FA261998C14B00A4E99D /* TSAnimViewController.m in Sources */,
 				EE281AE3198A5F6F00F37208 /* main.m in Sources */,
 				EE281AE7198A5F6F00F37208 /* TSAppDelegate.m in Sources */,
+				EEB3C8CF1994E02B0004377C /* UIView+LoadFromNib.m in Sources */,
+				EEBAB1FB199859D60021D093 /* TSView.m in Sources */,
 				EE281B0D198A5F9E00F37208 /* TSUncaughtExceptionHandler.m in Sources */,
+				EE9CA1801993786600A713BA /* TSCollViewController.m in Sources */,
 				EE9CA17A1991D38600A713BA /* BFPaperCheckbox.m in Sources */,
 				EE281AED198A5F6F00F37208 /* TSViewController.m in Sources */,
+				EE9CA18319937A8500A713BA /* TSCollectionViewLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +475,7 @@
 		};
 		EE281B06198A5F6F00F37208 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 201FE8389B3D438CB2411CE4 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -413,6 +489,7 @@
 		};
 		EE281B07198A5F6F00F37208 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 201FE8389B3D438CB2411CE4 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
