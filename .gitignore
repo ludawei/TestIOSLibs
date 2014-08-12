@@ -1,11 +1,19 @@
-# CocoaPods
+#########################
+# .gitignore file for Xcode4 / OS X Source projects
 #
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control?
+# Version 2.0
+#    For latest version, see: http://stackoverflow.com/questions/49478/git-ignore-file-for-xcode-projects
 #
-# Pods/
-
+# 2013 updates:
+#    - fixed the broken "save personal Schemes"
+#
+# NB: if you are storing "built" products, this WILL NOT WORK,
+#   and you should use a different .gitignore (or none at all)
+# This file is for SOURCE projects, where there are many extra
+#   files that we want to exclude
+#
+#########################
+ 
 #####
 # OS X temporary files that should never be committed
  
