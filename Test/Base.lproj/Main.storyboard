@@ -98,9 +98,25 @@
                     <view key="view" contentMode="scaleToFill" id="7dt-Mz-cv8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="local0" translatesAutoresizingMaskIntoConstraints="NO" id="ASC-xb-klN">
+                                <rect key="frame" x="130" y="488" width="59" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="1NM-FE-E2s"/>
+                                    <constraint firstAttribute="width" constant="59" id="Tya-ha-R2J"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ASC-xb-klN" firstAttribute="leading" secondItem="7dt-Mz-cv8" secondAttribute="leading" constant="130" id="URh-Mt-Rj0"/>
+                            <constraint firstItem="uRh-ec-n7W" firstAttribute="top" secondItem="ASC-xb-klN" secondAttribute="bottom" constant="21" id="boH-Q5-3P6"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nqh-Il-fVB"/>
+                    <connections>
+                        <outlet property="imgView" destination="ASC-xb-klN" id="FHC-RZ-I3o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o74-Y5-QLV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -267,6 +283,7 @@
     </scenes>
     <resources>
         <image name="IMG_0345_MarkMan" width="320" height="587"/>
+        <image name="local0" width="59" height="59"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

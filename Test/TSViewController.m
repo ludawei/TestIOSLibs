@@ -16,6 +16,9 @@
 @interface TSViewController ()<BFPaperCheckboxDelegate>
 
 @property (nonatomic,strong) AFViewShaker * viewShaker;
+@property (nonatomic,weak) IBOutlet UIImageView *imgView;
+@property (nonatomic,strong) UIImageView *changeImgView;
+@property (nonatomic) int oldRand;
 
 @end
 
@@ -38,7 +41,7 @@
 //    [self.view addSubview:paperCheckbox2];
 //
     TSView *tv = [TSView loadFromXib];
-    tv.backgroundColor = [UIColor grayColor];
+//    tv.backgroundColor = [UIColor grayColor];
     [self.view addSubview:tv];
     
     TSDrawView *dView = [[TSDrawView alloc] init];
@@ -111,6 +114,40 @@
     }
     
     self.viewShaker = [[AFViewShaker alloc] initWithView:self.view];
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    self.changeImgView = [[UIImageView alloc] initWithFrame:self.imgView.frame];
+    [self.view addSubview:self.changeImgView];
+    self.changeImgView.image = self.changeImgView.image;
+    
+    [self changeImage];
+}
+
+-(void)changeImage
+{
+    int rand = arc4random_uniform(8) + 1;
+    int count = 0;
+    while (rand == self.oldRand || count <= 100) {
+        rand = arc4random_uniform(8) + 1;
+        count++;
+    }
+    self.oldRand = rand;
+    self.imgView.image = self.imgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"local%d", rand]];
+    self.changeImgView.alpha = 1.0f;
+    self.imgView.alpha = 0;
+    [UIView animateWithDuration:0.5f animations:^{
+        self.changeImgView.alpha = 0;
+        self.imgView.alpha = 1.0f;
+    } completion:^(BOOL finished) {
+        if (finished) {
+            
+            [self changeImage];
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning
