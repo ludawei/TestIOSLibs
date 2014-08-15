@@ -8,6 +8,7 @@
 
 #import "TSUncaughtExceptionHandler.h"
 
+#if 0
 NSString * const UncaughtExceptionHandlerSignalExceptionName = @"UncaughtExceptionHandlerSignalExceptionName";
 NSString * const UncaughtExceptionHandlerSignalKey = @"UncaughtExceptionHandlerSignalKey";
 NSString * const UncaughtExceptionHandlerAddressesKey = @"UncaughtExceptionHandlerAddressesKey";
@@ -179,3 +180,4 @@ void InstallUncaughtExceptionHandler(void)
 }
 
 
+#endif

@@ -37,5 +37,9 @@
     // Drawing code
 }
 */
+-(void)awakeFromNib
+{
+
+}
 
 @end

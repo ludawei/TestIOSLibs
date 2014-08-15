@@ -23,6 +23,8 @@
 		EE281B00198A5F6F00F37208 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE281AFE198A5F6F00F37208 /* InfoPlist.strings */; };
 		EE281B02198A5F6F00F37208 /* TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE281B01198A5F6F00F37208 /* TestTests.m */; };
 		EE281B0D198A5F9E00F37208 /* TSUncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = EE281B0C198A5F9E00F37208 /* TSUncaughtExceptionHandler.m */; };
+		EE4B6E98199B6DCC00BD3B98 /* TSMyTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4B6E97199B6DCC00BD3B98 /* TSMyTestView.m */; };
+		EE4B6E9B199DAE7900BD3B98 /* TSDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4B6E9A199DAE7900BD3B98 /* TSDrawView.m */; };
 		EE85FA261998C14B00A4E99D /* TSAnimViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE85FA251998C14B00A4E99D /* TSAnimViewController.m */; };
 		EE9CA17A1991D38600A713BA /* BFPaperCheckbox.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9CA1791991D38600A713BA /* BFPaperCheckbox.m */; };
 		EE9CA17D1991D3F200A713BA /* UIColor+BFPaperColors.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9CA17C1991D3F200A713BA /* UIColor+BFPaperColors.m */; };
@@ -67,6 +69,10 @@
 		EE281B01198A5F6F00F37208 /* TestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTests.m; sourceTree = "<group>"; };
 		EE281B0B198A5F9E00F37208 /* TSUncaughtExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSUncaughtExceptionHandler.h; sourceTree = "<group>"; };
 		EE281B0C198A5F9E00F37208 /* TSUncaughtExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSUncaughtExceptionHandler.m; sourceTree = "<group>"; };
+		EE4B6E96199B6DCC00BD3B98 /* TSMyTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMyTestView.h; sourceTree = "<group>"; };
+		EE4B6E97199B6DCC00BD3B98 /* TSMyTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMyTestView.m; sourceTree = "<group>"; };
+		EE4B6E99199DAE7900BD3B98 /* TSDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDrawView.h; sourceTree = "<group>"; };
+		EE4B6E9A199DAE7900BD3B98 /* TSDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSDrawView.m; sourceTree = "<group>"; };
 		EE85FA241998C14B00A4E99D /* TSAnimViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSAnimViewController.h; sourceTree = "<group>"; };
 		EE85FA251998C14B00A4E99D /* TSAnimViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSAnimViewController.m; sourceTree = "<group>"; };
 		EE9CA1781991D38600A713BA /* BFPaperCheckbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFPaperCheckbox.h; sourceTree = "<group>"; };
@@ -165,6 +171,10 @@
 				EEBAB1FA199859D60021D093 /* TSView.xib */,
 				EE85FA241998C14B00A4E99D /* TSAnimViewController.h */,
 				EE85FA251998C14B00A4E99D /* TSAnimViewController.m */,
+				EE4B6E96199B6DCC00BD3B98 /* TSMyTestView.h */,
+				EE4B6E97199B6DCC00BD3B98 /* TSMyTestView.m */,
+				EE4B6E99199DAE7900BD3B98 /* TSDrawView.h */,
+				EE4B6E9A199DAE7900BD3B98 /* TSDrawView.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -347,11 +357,13 @@
 				EE85FA261998C14B00A4E99D /* TSAnimViewController.m in Sources */,
 				EE281AE3198A5F6F00F37208 /* main.m in Sources */,
 				EE281AE7198A5F6F00F37208 /* TSAppDelegate.m in Sources */,
+				EE4B6E9B199DAE7900BD3B98 /* TSDrawView.m in Sources */,
 				EEB3C8CF1994E02B0004377C /* UIView+LoadFromNib.m in Sources */,
 				EEBAB1FB199859D60021D093 /* TSView.m in Sources */,
 				EE281B0D198A5F9E00F37208 /* TSUncaughtExceptionHandler.m in Sources */,
 				EE9CA1801993786600A713BA /* TSCollViewController.m in Sources */,
 				EE9CA17A1991D38600A713BA /* BFPaperCheckbox.m in Sources */,
+				EE4B6E98199B6DCC00BD3B98 /* TSMyTestView.m in Sources */,
 				EE281AED198A5F6F00F37208 /* TSViewController.m in Sources */,
 				EE9CA18319937A8500A713BA /* TSCollectionViewLayout.m in Sources */,
 			);

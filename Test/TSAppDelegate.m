@@ -13,7 +13,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    InstallUncaughtExceptionHandler();
+//    InstallUncaughtExceptionHandler();
 
     // Override point for customization after application launch.
     NSURL *url = [launchOptions objectForKey:UIApplicationLaunchOptionsURLKey];
