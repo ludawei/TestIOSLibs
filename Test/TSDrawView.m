@@ -102,7 +102,7 @@
 #if 0
     [path addArcWithCenter:CGPointMake(60, 60) radius:60 startAngle:0 endAngle:2*M_PI clockwise:NO];
 #else
-    [path addArcWithCenter:CGPointMake(size.width/2, size.width/2) radius:size.height/2 startAngle:0 endAngle:2*M_PI clockwise:NO];
+    [path addArcWithCenter:CGPointMake(size.width/2, size.width/2) radius:size.height/2 startAngle:M_PI*2 endAngle:0 clockwise:NO];
 #endif
     [path closePath];
     CAShapeLayer *arcLayer=[CAShapeLayer layer];
@@ -110,7 +110,8 @@
     arcLayer.path=path.CGPath;//46,169,230
     arcLayer.fillColor=[UIColor blueColor].CGColor;
     arcLayer.strokeColor=[UIColor colorWithWhite:1 alpha:0.7].CGColor;
-    arcLayer.lineWidth=size.height;
+    arcLayer.lineWidth = size.height;
+    arcLayer.strokeEnd = 0.5f;
     arcLayer.cornerRadius = size.height/2;
     arcLayer.masksToBounds = YES;
     arcLayer.frame=CGRectMake(size.width + 40, 0, size.width, size.height);
@@ -142,7 +143,7 @@
     bas.duration=2;
     bas.delegate=self;
     bas.fromValue=[NSNumber numberWithInteger:0];
-    bas.toValue=[NSNumber numberWithInteger:1];
+    bas.toValue=[NSNumber numberWithFloat:0.5];
     [layer addAnimation:bas forKey:@"key"];
 }
 @end

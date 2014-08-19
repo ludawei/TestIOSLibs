@@ -104,10 +104,10 @@
         NSMutableArray * tempConstraints = [NSMutableArray array];
         
         [tempConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[tv]-0-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(tv)]];
-        [tempConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-100-[tv(>=120)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(tv)]];
+        [tempConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-100-[tv(>=200)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(tv)]];
         
         [tempConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[dView]-20-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(dView)]];
-        [tempConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-240-[dView(>=120)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(dView)]];
+        [tempConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-340-[dView(>=120)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(dView)]];
         
         [self.view addConstraints:tempConstraints];
 #endif
@@ -125,6 +125,11 @@
     self.changeImgView.image = self.changeImgView.image;
     
     [self changeImage];
+    
+    [self startAnim];
+    
+//    UIImage *img;
+//    [img re]
 }
 
 -(void)changeImage
@@ -148,6 +153,39 @@
             [self changeImage];
         }
     }];
+    
+    
+}
+
+-(void)startAnim{
+    UIBezierPath *path1=[UIBezierPath bezierPath];
+    [path1 moveToPoint:CGPointMake(10, 70)];
+    [path1 addCurveToPoint:CGPointMake(20, 100) controlPoint1:CGPointMake(60, 100) controlPoint2:CGPointMake(200, 150)];
+//    [path1 addLineToPoint:CGPointMake(0, size.height)];
+    
+//    [path1 closePath];
+    CAShapeLayer *lineLayer=[CAShapeLayer layer];
+    lineLayer.path=path1.CGPath;//46,169,230
+    lineLayer.fillColor=[UIColor clearColor].CGColor;
+    lineLayer.strokeColor=[UIColor orangeColor].CGColor;
+    lineLayer.lineWidth = 3;
+    lineLayer.masksToBounds = YES;
+    lineLayer.frame=CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
+    [self.view.layer addSublayer:lineLayer];
+
+    [self drawLineAnimation:lineLayer];
+}
+
+//定义动画过程
+-(void)drawLineAnimation:(CALayer*)layer
+{
+    //    CABasicAnimation *bas=[CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    CABasicAnimation *bas=[CABasicAnimation animationWithKeyPath:NSStringFromSelector(@selector(strokeEnd))];
+    bas.duration=2;
+    bas.delegate=self;
+    bas.fromValue=[NSNumber numberWithInteger:0];
+    bas.toValue=[NSNumber numberWithInteger:1];
+    [layer addAnimation:bas forKey:nil];
 }
 
 - (void)didReceiveMemoryWarning

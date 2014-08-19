@@ -1,9 +1,20 @@
 {
   "images" : [
     {
+      "resizing" : {
+        "mode" : "3-part-vertical",
+        "center" : {
+          "mode" : "fill",
+          "height" : 1
+        },
+        "capInsets" : {
+          "top" : 29,
+          "bottom" : 29
+        }
+      },
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "local0.png"
+      "filename" : "local0.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
