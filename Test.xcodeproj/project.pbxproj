@@ -33,6 +33,8 @@
 		EEB3C8CF1994E02B0004377C /* UIView+LoadFromNib.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB3C8CE1994E02B0004377C /* UIView+LoadFromNib.m */; };
 		EEBAB1FB199859D60021D093 /* TSView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBAB1F9199859D60021D093 /* TSView.m */; };
 		EEBAB1FC199859D60021D093 /* TSView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEBAB1FA199859D60021D093 /* TSView.xib */; };
+		EEBF0DDE19A30181006B0DDD /* TSAnim1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBF0DDD19A30181006B0DDD /* TSAnim1ViewController.m */; };
+		EEBF0DE119A301EA006B0DDD /* TSCycleAnimView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBF0DE019A301EA006B0DDD /* TSCycleAnimView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,10 @@
 		EEBAB1F8199859D60021D093 /* TSView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSView.h; sourceTree = "<group>"; };
 		EEBAB1F9199859D60021D093 /* TSView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSView.m; sourceTree = "<group>"; };
 		EEBAB1FA199859D60021D093 /* TSView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSView.xib; sourceTree = "<group>"; };
+		EEBF0DDC19A30181006B0DDD /* TSAnim1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSAnim1ViewController.h; sourceTree = "<group>"; };
+		EEBF0DDD19A30181006B0DDD /* TSAnim1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSAnim1ViewController.m; sourceTree = "<group>"; };
+		EEBF0DDF19A301EA006B0DDD /* TSCycleAnimView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCycleAnimView.h; sourceTree = "<group>"; };
+		EEBF0DE019A301EA006B0DDD /* TSCycleAnimView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCycleAnimView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +181,10 @@
 				EE4B6E97199B6DCC00BD3B98 /* TSMyTestView.m */,
 				EE4B6E99199DAE7900BD3B98 /* TSDrawView.h */,
 				EE4B6E9A199DAE7900BD3B98 /* TSDrawView.m */,
+				EEBF0DDC19A30181006B0DDD /* TSAnim1ViewController.h */,
+				EEBF0DDD19A30181006B0DDD /* TSAnim1ViewController.m */,
+				EEBF0DDF19A301EA006B0DDD /* TSCycleAnimView.h */,
+				EEBF0DE019A301EA006B0DDD /* TSCycleAnimView.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -357,8 +367,10 @@
 				EE85FA261998C14B00A4E99D /* TSAnimViewController.m in Sources */,
 				EE281AE3198A5F6F00F37208 /* main.m in Sources */,
 				EE281AE7198A5F6F00F37208 /* TSAppDelegate.m in Sources */,
+				EEBF0DE119A301EA006B0DDD /* TSCycleAnimView.m in Sources */,
 				EE4B6E9B199DAE7900BD3B98 /* TSDrawView.m in Sources */,
 				EEB3C8CF1994E02B0004377C /* UIView+LoadFromNib.m in Sources */,
+				EEBF0DDE19A30181006B0DDD /* TSAnim1ViewController.m in Sources */,
 				EEBAB1FB199859D60021D093 /* TSView.m in Sources */,
 				EE281B0D198A5F9E00F37208 /* TSUncaughtExceptionHandler.m in Sources */,
 				EE9CA1801993786600A713BA /* TSCollViewController.m in Sources */,

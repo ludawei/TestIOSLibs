@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8ph-tC-N56">
     <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
     </dependencies>
     <scenes>
@@ -28,8 +29,8 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4eG-PB-nbH">
-                                                    <rect key="frame" x="39" y="8" width="39" height="22"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="local1" translatesAutoresizingMaskIntoConstraints="NO" id="4eG-PB-nbH">
+                                                    <rect key="frame" x="39" y="4" width="39" height="35"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -50,8 +51,8 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1u2-Hw-qdA">
-                                                    <rect key="frame" x="42" y="16" width="39" height="22"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="local2" translatesAutoresizingMaskIntoConstraints="NO" id="LeA-ZO-EXS">
+                                                    <rect key="frame" x="37" y="4" width="39" height="35"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -72,8 +73,8 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jqu-f5-d9A">
-                                                    <rect key="frame" x="29" y="14" width="39" height="22"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="local3" translatesAutoresizingMaskIntoConstraints="NO" id="okU-vh-Ffg">
+                                                    <rect key="frame" x="39" y="4" width="39" height="35"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -81,13 +82,24 @@
                                             <segue destination="Nlb-Po-yXY" kind="push" id="Nge-78-6NE"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="9xy-fG-3wu">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="9xy-fG-3wu">
                                         <rect key="frame" x="0.0" y="196" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9xy-fG-3wu" id="Ddf-hF-crJ">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="cycleAnim" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PhW-hY-FVf">
+                                                    <rect key="frame" x="76" y="9" width="168" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="I94-zT-I8x" kind="push" id="lxn-wh-9TM"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -101,7 +113,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZA3-9G-Zps" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-30" y="156"/>
+            <point key="canvasLocation" x="-30" y="153"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Bpk-ST-iHa">
@@ -210,6 +222,25 @@
             </objects>
             <point key="canvasLocation" x="-479" y="172"/>
         </scene>
+        <!--Anim1 View Controller-->
+        <scene sceneID="uGa-Mv-PXO">
+            <objects>
+                <viewController id="I94-zT-I8x" customClass="TSAnim1ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lDA-KI-Zk2"/>
+                        <viewControllerLayoutGuide type="bottom" id="3hR-y2-imZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R56-jT-g8r">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="s90-l6-r85"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tia-sW-n8P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-28" y="854"/>
+        </scene>
         <!--animViewController-->
         <scene sceneID="9Yc-Nk-yoV">
             <objects>
@@ -300,6 +331,9 @@
     <resources>
         <image name="IMG_0345_MarkMan" width="320" height="587"/>
         <image name="local0" width="59" height="59"/>
+        <image name="local1" width="59" height="59"/>
+        <image name="local2" width="59" height="59"/>
+        <image name="local3" width="59" height="59"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
