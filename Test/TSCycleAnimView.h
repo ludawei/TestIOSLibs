@@ -20,6 +20,6 @@ static NSString *cyColor = @"color";
  *
  *  @return a alloced TSCycleAnimView object.
  */
--(instancetype)initWithDicts:(NSDictionary *)dict,...;
+-(instancetype)initWithDicts:(NSDictionary *)dict,... NS_REQUIRES_NIL_TERMINATION;
 
 @end

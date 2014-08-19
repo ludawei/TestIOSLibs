@@ -8,12 +8,18 @@
 
 #import "TSAppDelegate.h"
 #import "TSUncaughtExceptionHandler.h"
+#import "CatchCrash.h"
 
 @implementation TSAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-//    InstallUncaughtExceptionHandler();
+#if 0
+    InstallUncaughtExceptionHandler();
+#else
+    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+    [CatchCrash uploadCrashLog];
+#endif
 
     // Override point for customization after application launch.
     NSURL *url = [launchOptions objectForKey:UIApplicationLaunchOptionsURLKey];

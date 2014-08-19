@@ -29,6 +29,8 @@
     pie.frame = CGRectMake(0,100,self.view.bounds.size.width, self.view.bounds.size.width);
     pie.backgroundColor = [UIColor clearColor];
     [self.view addSubview:pie];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,5 +47,11 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(IBAction)clickErrorLog
+{
+    NSArray *arry=[NSArray arrayWithObject:@"sss"];
+    NSLog(@"%@",[arry objectAtIndex:1]);
+}
 
 @end

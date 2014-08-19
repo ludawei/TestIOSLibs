@@ -35,6 +35,7 @@
 		EEBAB1FC199859D60021D093 /* TSView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEBAB1FA199859D60021D093 /* TSView.xib */; };
 		EEBF0DDE19A30181006B0DDD /* TSAnim1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBF0DDD19A30181006B0DDD /* TSAnim1ViewController.m */; };
 		EEBF0DE119A301EA006B0DDD /* TSCycleAnimView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBF0DE019A301EA006B0DDD /* TSCycleAnimView.m */; };
+		EEBF0DE419A341FE006B0DDD /* CatchCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBF0DE319A341FE006B0DDD /* CatchCrash.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,8 @@
 		EEBF0DDD19A30181006B0DDD /* TSAnim1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSAnim1ViewController.m; sourceTree = "<group>"; };
 		EEBF0DDF19A301EA006B0DDD /* TSCycleAnimView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCycleAnimView.h; sourceTree = "<group>"; };
 		EEBF0DE019A301EA006B0DDD /* TSCycleAnimView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCycleAnimView.m; sourceTree = "<group>"; };
+		EEBF0DE219A341FE006B0DDD /* CatchCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatchCrash.h; sourceTree = "<group>"; };
+		EEBF0DE319A341FE006B0DDD /* CatchCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatchCrash.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +188,8 @@
 				EEBF0DDD19A30181006B0DDD /* TSAnim1ViewController.m */,
 				EEBF0DDF19A301EA006B0DDD /* TSCycleAnimView.h */,
 				EEBF0DE019A301EA006B0DDD /* TSCycleAnimView.m */,
+				EEBF0DE219A341FE006B0DDD /* CatchCrash.h */,
+				EEBF0DE319A341FE006B0DDD /* CatchCrash.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -374,6 +379,7 @@
 				EEBAB1FB199859D60021D093 /* TSView.m in Sources */,
 				EE281B0D198A5F9E00F37208 /* TSUncaughtExceptionHandler.m in Sources */,
 				EE9CA1801993786600A713BA /* TSCollViewController.m in Sources */,
+				EEBF0DE419A341FE006B0DDD /* CatchCrash.m in Sources */,
 				EE9CA17A1991D38600A713BA /* BFPaperCheckbox.m in Sources */,
 				EE4B6E98199B6DCC00BD3B98 /* TSMyTestView.m in Sources */,
 				EE281AED198A5F6F00F37208 /* TSViewController.m in Sources */,
