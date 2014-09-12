@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1CA94E7DC9EC4A1583DC6A99 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5E8FFC218D4743BF9F1A2B /* libPods.a */; };
+		EE14B62F19C296EC00332BE4 /* TSPythonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE14B62E19C296EC00332BE4 /* TSPythonViewController.m */; };
 		EE281AD7198A5F6F00F37208 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE281AD6198A5F6F00F37208 /* Foundation.framework */; };
 		EE281AD9198A5F6F00F37208 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE281AD8198A5F6F00F37208 /* CoreGraphics.framework */; };
 		EE281ADB198A5F6F00F37208 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE281ADA198A5F6F00F37208 /* UIKit.framework */; };
@@ -51,6 +52,8 @@
 /* Begin PBXFileReference section */
 		201FE8389B3D438CB2411CE4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		EB5E8FFC218D4743BF9F1A2B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE14B62D19C296EC00332BE4 /* TSPythonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPythonViewController.h; sourceTree = "<group>"; };
+		EE14B62E19C296EC00332BE4 /* TSPythonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSPythonViewController.m; sourceTree = "<group>"; };
 		EE281AD3198A5F6F00F37208 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE281AD6198A5F6F00F37208 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EE281AD8198A5F6F00F37208 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -190,6 +193,8 @@
 				EEBF0DE019A301EA006B0DDD /* TSCycleAnimView.m */,
 				EEBF0DE219A341FE006B0DDD /* CatchCrash.h */,
 				EEBF0DE319A341FE006B0DDD /* CatchCrash.m */,
+				EE14B62D19C296EC00332BE4 /* TSPythonViewController.h */,
+				EE14B62E19C296EC00332BE4 /* TSPythonViewController.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -368,6 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE14B62F19C296EC00332BE4 /* TSPythonViewController.m in Sources */,
 				EE9CA17D1991D3F200A713BA /* UIColor+BFPaperColors.m in Sources */,
 				EE85FA261998C14B00A4E99D /* TSAnimViewController.m in Sources */,
 				EE281AE3198A5F6F00F37208 /* main.m in Sources */,

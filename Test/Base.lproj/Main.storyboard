@@ -101,6 +101,25 @@
                                             <segue destination="I94-zT-I8x" kind="push" id="lxn-wh-9TM"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Ki7-Y2-adg">
+                                        <rect key="frame" x="0.0" y="196" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ki7-Y2-adg" id="gfT-rB-0gw">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="pythonServer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMM-z1-oYZ">
+                                                    <rect key="frame" x="76" y="9" width="168" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="l65-VJ-sV1" kind="push" id="Jpk-ty-Sat"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -149,6 +168,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o74-Y5-QLV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="502" y="119"/>
+        </scene>
+        <!--Python View Controller-->
+        <scene sceneID="nEZ-8h-5a1">
+            <objects>
+                <viewController id="l65-VJ-sV1" customClass="TSPythonViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EZk-Xy-CEw"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Dr-Ep-EyD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jvb-Iy-OYQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdQ-j0-ZcK">
+                                <rect key="frame" x="16" y="85" width="288" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="CN6-1N-S6U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tLu-dU-fOo">
+                                <rect key="frame" x="33" y="176" width="255" height="372"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tLu-dU-fOo" firstAttribute="top" secondItem="qdQ-j0-ZcK" secondAttribute="bottom" constant="21" id="66U-Uj-oDM"/>
+                            <constraint firstAttribute="trailing" secondItem="tLu-dU-fOo" secondAttribute="trailing" constant="32" id="CDe-mt-5Tn"/>
+                            <constraint firstAttribute="trailing" secondItem="qdQ-j0-ZcK" secondAttribute="trailing" constant="16" id="LMK-AG-2PE"/>
+                            <constraint firstItem="tLu-dU-fOo" firstAttribute="leading" secondItem="jvb-Iy-OYQ" secondAttribute="leading" constant="33" id="W6G-mQ-nwK"/>
+                            <constraint firstAttribute="bottom" secondItem="tLu-dU-fOo" secondAttribute="bottom" constant="20" id="ZZl-WU-L2y"/>
+                            <constraint firstItem="qdQ-j0-ZcK" firstAttribute="leading" secondItem="jvb-Iy-OYQ" secondAttribute="leading" constant="16" id="n1V-2h-hlR"/>
+                            <constraint firstItem="qdQ-j0-ZcK" firstAttribute="top" secondItem="jvb-Iy-OYQ" secondAttribute="top" constant="85" id="wOx-FY-rNN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="BT8-iK-Pme"/>
+                    <connections>
+                        <outlet property="contentLbl" destination="qdQ-j0-ZcK" id="V6s-y4-nLA"/>
+                        <outlet property="imageview" destination="tLu-dU-fOo" id="aOH-81-WQG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Tn-HL-5C1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="904" y="122"/>
         </scene>
         <!--test-->
         <scene sceneID="bZO-ez-uy7">
