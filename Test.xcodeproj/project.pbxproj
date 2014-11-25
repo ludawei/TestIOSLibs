@@ -32,11 +32,14 @@
 		EE9CA1801993786600A713BA /* TSCollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9CA17F1993786600A713BA /* TSCollViewController.m */; };
 		EE9CA18319937A8500A713BA /* TSCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9CA18219937A8500A713BA /* TSCollectionViewLayout.m */; };
 		EEB3C8CF1994E02B0004377C /* UIView+LoadFromNib.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB3C8CE1994E02B0004377C /* UIView+LoadFromNib.m */; };
+		EEB5A20F1A19EE3D00681C44 /* Music.m4a in Resources */ = {isa = PBXBuildFile; fileRef = EEB5A20E1A19EE3D00681C44 /* Music.m4a */; };
+		EEB5A2121A19F3AC00681C44 /* TSVideoEditerController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB5A2111A19F3AC00681C44 /* TSVideoEditerController.m */; };
 		EEBAB1FB199859D60021D093 /* TSView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBAB1F9199859D60021D093 /* TSView.m */; };
 		EEBAB1FC199859D60021D093 /* TSView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEBAB1FA199859D60021D093 /* TSView.xib */; };
 		EEBF0DDE19A30181006B0DDD /* TSAnim1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBF0DDD19A30181006B0DDD /* TSAnim1ViewController.m */; };
 		EEBF0DE119A301EA006B0DDD /* TSCycleAnimView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBF0DE019A301EA006B0DDD /* TSCycleAnimView.m */; };
 		EEBF0DE419A341FE006B0DDD /* CatchCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBF0DE319A341FE006B0DDD /* CatchCrash.m */; };
+		EEBF7CE91A175672001C3EF2 /* Movie.m4v in Resources */ = {isa = PBXBuildFile; fileRef = EEBF7CE81A175672001C3EF2 /* Movie.m4v */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +94,9 @@
 		EE9CA18219937A8500A713BA /* TSCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCollectionViewLayout.m; sourceTree = "<group>"; };
 		EEB3C8CD1994E02B0004377C /* UIView+LoadFromNib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LoadFromNib.h"; sourceTree = "<group>"; };
 		EEB3C8CE1994E02B0004377C /* UIView+LoadFromNib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LoadFromNib.m"; sourceTree = "<group>"; };
+		EEB5A20E1A19EE3D00681C44 /* Music.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Music.m4a; sourceTree = "<group>"; };
+		EEB5A2101A19F3AC00681C44 /* TSVideoEditerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSVideoEditerController.h; sourceTree = "<group>"; };
+		EEB5A2111A19F3AC00681C44 /* TSVideoEditerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSVideoEditerController.m; sourceTree = "<group>"; };
 		EEBAB1F8199859D60021D093 /* TSView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSView.h; sourceTree = "<group>"; };
 		EEBAB1F9199859D60021D093 /* TSView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSView.m; sourceTree = "<group>"; };
 		EEBAB1FA199859D60021D093 /* TSView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSView.xib; sourceTree = "<group>"; };
@@ -100,6 +106,7 @@
 		EEBF0DE019A301EA006B0DDD /* TSCycleAnimView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCycleAnimView.m; sourceTree = "<group>"; };
 		EEBF0DE219A341FE006B0DDD /* CatchCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatchCrash.h; sourceTree = "<group>"; };
 		EEBF0DE319A341FE006B0DDD /* CatchCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatchCrash.m; sourceTree = "<group>"; };
+		EEBF7CE81A175672001C3EF2 /* Movie.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = Movie.m4v; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +202,8 @@
 				EEBF0DE319A341FE006B0DDD /* CatchCrash.m */,
 				EE14B62D19C296EC00332BE4 /* TSPythonViewController.h */,
 				EE14B62E19C296EC00332BE4 /* TSPythonViewController.m */,
+				EEB5A2101A19F3AC00681C44 /* TSVideoEditerController.h */,
+				EEB5A2111A19F3AC00681C44 /* TSVideoEditerController.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -202,6 +211,8 @@
 		EE281ADD198A5F6F00F37208 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EEB5A20E1A19EE3D00681C44 /* Music.m4a */,
+				EEBF7CE81A175672001C3EF2 /* Movie.m4v */,
 				EE281ADE198A5F6F00F37208 /* Test-Info.plist */,
 				EE281ADF198A5F6F00F37208 /* InfoPlist.strings */,
 				EE281AE2198A5F6F00F37208 /* main.m */,
@@ -318,10 +329,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEB5A20F1A19EE3D00681C44 /* Music.m4a in Resources */,
 				EE281AEF198A5F6F00F37208 /* Images.xcassets in Resources */,
 				EE281AE1198A5F6F00F37208 /* InfoPlist.strings in Resources */,
 				EEBAB1FC199859D60021D093 /* TSView.xib in Resources */,
 				EE281AEA198A5F6F00F37208 /* Main.storyboard in Resources */,
+				EEBF7CE91A175672001C3EF2 /* Movie.m4v in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +401,7 @@
 				EEBF0DE419A341FE006B0DDD /* CatchCrash.m in Sources */,
 				EE9CA17A1991D38600A713BA /* BFPaperCheckbox.m in Sources */,
 				EE4B6E98199B6DCC00BD3B98 /* TSMyTestView.m in Sources */,
+				EEB5A2121A19F3AC00681C44 /* TSVideoEditerController.m in Sources */,
 				EE281AED198A5F6F00F37208 /* TSViewController.m in Sources */,
 				EE9CA18319937A8500A713BA /* TSCollectionViewLayout.m in Sources */,
 			);

@@ -60,6 +60,12 @@
 #define COCOAPODS_VERSION_MINOR_FastAnimationWithPOP 0
 #define COCOAPODS_VERSION_PATCH_FastAnimationWithPOP 2
 
+// Fingertips
+#define COCOAPODS_POD_AVAILABLE_Fingertips
+#define COCOAPODS_VERSION_MAJOR_Fingertips 0
+#define COCOAPODS_VERSION_MINOR_Fingertips 3
+#define COCOAPODS_VERSION_PATCH_Fingertips 0
+
 // Reveal-iOS-SDK
 #define COCOAPODS_POD_AVAILABLE_Reveal_iOS_SDK
 #define COCOAPODS_VERSION_MAJOR_Reveal_iOS_SDK 1
@@ -82,5 +88,5 @@
 #define COCOAPODS_POD_AVAILABLE_pop
 #define COCOAPODS_VERSION_MAJOR_pop 1
 #define COCOAPODS_VERSION_MINOR_pop 0
-#define COCOAPODS_VERSION_PATCH_pop 6
+#define COCOAPODS_VERSION_PATCH_pop 7
 

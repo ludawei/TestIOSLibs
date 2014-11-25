@@ -44,7 +44,7 @@
 //    tv.backgroundColor = [UIColor grayColor];
     [self.view addSubview:tv];
     
-    TSDrawView *dView = [[TSDrawView alloc] init];
+    TSDrawView *dView     = [[TSDrawView alloc] init];
     dView.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:dView];
     

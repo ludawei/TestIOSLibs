@@ -9,6 +9,7 @@
 #import "TSAppDelegate.h"
 #import "TSUncaughtExceptionHandler.h"
 #import "CatchCrash.h"
+#import <Fingertips/MBFingerTipWindow.h>
 
 @implementation TSAppDelegate
 
@@ -30,6 +31,19 @@
     if(localNotify)     {     }
     NSDictionary * userInfo = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
     if(userInfo)     {     }
+    
+    CGFloat t = 6.6;
+    CGFloat t1 = 6.4;
+    CGFloat t2 = 6.51;
+    NSLog(@"%.f, %.f, %.f", floorf(t), ceil(t), nearbyint(t));
+    NSLog(@"%.f, %.f, %.f", floorf(t1), ceil(t1), nearbyint(t1));
+    NSLog(@"%.f, %.f, %.f", floorf(t2), ceil(t2), nearbyint(t2));
+
+//    UIViewController *vc = self.window.rootViewController;
+//    CGRect frame = [[UIScreen mainScreen] bounds];
+//    self.window = [[MBFingerTipWindow alloc] initWithFrame:frame];
+//    self.window.rootViewController = vc;
+//    [self.window makeKeyAndVisible];
     
     return YES;
 }

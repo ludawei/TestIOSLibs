@@ -34,8 +34,9 @@
     CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
     
     self.contentView.hidden = YES;
+    
+    
 }
-
 
 - (void)didReceiveMemoryWarning
 {
@@ -53,14 +54,15 @@
     
     self.contentView.hidden = NO;
 //    NSSet
-    NSArray *animNames = @[@"BounceRight", @"BounceUp", @"BounceDown", @"BounceLeft"];
-    for (UIView *sub in self.contentView.subviews) {
-        
-        int rand = arc4random_uniform(animNames.count);
-        sub.animationType = animNames[rand];
-        sub.delay = [self.contentView.subviews indexOfObject:sub] * 0.3 + 0.3;
-        [sub startFAAnimation];
-    }
+//    NSArray *animNames = @[@"BounceRight", @"BounceUp", @"BounceDown", @"BounceLeft"];
+//    for (UIView *sub in self.contentView.subviews) {
+//        
+//        int rand = arc4random_uniform(animNames.count);
+//        sub.animationType = animNames[rand];
+//        sub.delay = [self.contentView.subviews indexOfObject:sub] * 0.3 + 0.3;
+//        [sub startFAAnimation];
+//    }
+    
     
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //        POPSpringAnimation *animation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerTranslationX];
@@ -80,4 +82,5 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 @end
