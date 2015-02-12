@@ -86,7 +86,28 @@
 
 -(IBAction)clickButton:(id)sender
 {
-    [self test1];
+//    [self test1];
+#if 0
+    UIImage *img = [UIImage imageNamed:@"IMG_0528.JPG"];
+    
+    NSString* videoName = [NSString stringWithFormat:@"mynewwatermarkedvideo-%d.mov", arc4random()%1000];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *outputURL = paths[0];
+    NSFileManager *manager = [NSFileManager defaultManager];
+    [manager createDirectoryAtPath:outputURL withIntermediateDirectories:YES attributes:nil error:nil];
+    outputURL = [outputURL stringByAppendingPathComponent:videoName];
+    
+    if ([[NSFileManager defaultManager] fileExistsAtPath:outputURL])
+    {
+        [[NSFileManager defaultManager] removeItemAtPath:outputURL error:nil];
+    }
+    
+    [self writeImages:@[img, img, img, img, img] ToMovieAtPath:outputURL withSize:img.size inDuration:12.0 byFPS:32];
+#else
+    NSString *videoURL1 = [[NSBundle mainBundle] pathForResource:@"movie1" ofType:@"mov"];
+    NSString *videoURL2 = [[NSBundle mainBundle] pathForResource:@"movie2" ofType:@"mov"];
+    [self mergeVedios:@[[NSURL fileURLWithPath:videoURL1],[NSURL fileURLWithPath:videoURL2]]];
+#endif
 }
 
 // 添加水印
@@ -437,9 +458,131 @@
     
     //Finish the session:
     [videoWriterInput markAsFinished];
+    
+    __block BOOL _finished = NO;
     [videoWriter finishWritingWithCompletionHandler:^{
+        _finished = YES;
         
+        ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+        
+        NSLog(@"finishWriting");
+        
+        [library writeVideoAtPathToSavedPhotosAlbum:[NSURL fileURLWithPath:path] completionBlock:^(NSURL *assetURL, NSError *error){
+            if (error) {
+                NSLog(@"Video could not be saved");
+            }
+            else
+            {
+                NSLog(@"save OK!");
+            }
+        }];
     }];
-    NSLog(@"finishWriting");
+    
+    while (!_finished) {
+        [NSThread sleepForTimeInterval:0.1];
+    }
+//    NSLog(@"finishWriting");
+}
+
+-(void)mergeVedios:(NSArray *)arrayMovieUrl
+{
+    if (arrayMovieUrl.count<=0) {
+        return;
+    }
+    
+    AVMutableComposition *mixComposition = [AVMutableComposition composition];
+    AVMutableCompositionTrack *compositionTrack = [mixComposition addMutableTrackWithMediaType:AVMediaTypeVideo preferredTrackID:kCMPersistentTrackID_Invalid];
+    NSError * error = nil;
+    NSMutableArray * timeRanges = [NSMutableArray arrayWithCapacity:arrayMovieUrl.count];
+    NSMutableArray * tracks = [NSMutableArray arrayWithCapacity:arrayMovieUrl.count];
+    
+    for (int i=0; i<[arrayMovieUrl count]; i++) {
+//        AVURLAsset *assetClip = [arrayMovieUrl objectAtIndex:i];
+        AVURLAsset* assetClip = [[AVURLAsset alloc]initWithURL:[arrayMovieUrl objectAtIndex:i] options:nil];
+        AVAssetTrack *clipVideoTrackB = [[assetClip tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0];
+        
+        [timeRanges addObject:[NSValue valueWithCMTimeRange:CMTimeRangeMake(kCMTimeZero, assetClip.duration)]];
+        [tracks addObject:clipVideoTrackB];
+    }
+    [compositionTrack insertTimeRanges:timeRanges ofTracks:tracks atTime:kCMTimeZero error:&error];
+
+//    CMTime current = kCMTimeZero;
+//    NSError *compositionError = nil;
+//    for (int i=0; i<[arrayMovieUrl count]; i++)
+//    {
+//        AVURLAsset* asset = [[AVURLAsset alloc]initWithURL:[arrayMovieUrl objectAtIndex:i] options:nil];
+//        BOOL result = [mixComposition insertTimeRange:CMTimeRangeMake(kCMTimeZero, [asset duration])
+//                                              ofAsset:asset
+//                                               atTime:current
+//                                                error:&compositionError];
+//        if(!result) {
+//            if(compositionError) {
+//                // manage the composition error case
+//            }
+//        } else {
+//            current = CMTimeAdd(current, [asset duration]);
+//        }
+//    }
+    
+    NSURL *outUrl = [self tempUrl];
+    
+    AVAssetExportSession *exporter = [[AVAssetExportSession alloc] initWithAsset:mixComposition presetName:AVAssetExportPresetMediumQuality];//AVAssetExportPresetPassthrough
+//    exporter.videoComposition = mixComposition;
+    exporter.outputFileType = AVFileTypeQuickTimeMovie;
+    exporter.outputURL = outUrl;
+    exporter.shouldOptimizeForNetworkUse = YES;
+    [exporter exportAsynchronouslyWithCompletionHandler:^{
+        switch ([exporter status]) {
+            case AVAssetExportSessionStatusFailed:
+                NSLog(@"Export failed: %@", [exporter error]);
+                break;
+            case AVAssetExportSessionStatusCancelled:
+                NSLog(@"Export canceled");
+                break;
+            case AVAssetExportSessionStatusCompleted:
+            {
+                NSLog(@"Export successfully");
+                ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+                
+                NSLog(@"finishWriting");
+                
+                [library writeVideoAtPathToSavedPhotosAlbum:outUrl completionBlock:^(NSURL *assetURL, NSError *error){
+                    if (error) {
+                        NSLog(@"Video could not be saved");
+                    }
+                    else
+                    {
+                        NSLog(@"save OK!");
+                    }
+                }];
+                break;
+            }
+            default:
+                break;
+        }
+        if (exporter.status != AVAssetExportSessionStatusCompleted){
+            NSLog(@"Retry export");
+//            [self renderMovie];
+            [self mergeVedios:arrayMovieUrl];
+        }
+    }];
+}
+
+-(NSURL *)tempUrl
+{
+    NSString* videoName = [NSString stringWithFormat:@"mynewmovie-%d.mov", arc4random()%1000];
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *outputURL = paths[0];
+    NSFileManager *manager = [NSFileManager defaultManager];
+    [manager createDirectoryAtPath:outputURL withIntermediateDirectories:YES attributes:nil error:nil];
+    outputURL = [outputURL stringByAppendingPathComponent:videoName];
+    
+    if ([[NSFileManager defaultManager] fileExistsAtPath:outputURL])
+    {
+        [[NSFileManager defaultManager] removeItemAtPath:outputURL error:nil];
+    }
+    
+    return outputURL;
 }
 @end

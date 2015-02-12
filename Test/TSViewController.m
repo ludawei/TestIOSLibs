@@ -116,6 +116,11 @@
     self.viewShaker = [[AFViewShaker alloc] initWithView:self.view];
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
+
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
@@ -130,6 +135,16 @@
     
 //    UIImage *img;
 //    [img re]
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+}
+
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
 }
 
 -(void)changeImage
