@@ -1,50 +1,48 @@
 PODS:
-  - AFNetworking (2.3.1):
-    - AFNetworking/NSURLConnection (= 2.3.1)
-    - AFNetworking/NSURLSession (= 2.3.1)
-    - AFNetworking/Reachability (= 2.3.1)
-    - AFNetworking/Security (= 2.3.1)
-    - AFNetworking/Serialization (= 2.3.1)
-    - AFNetworking/UIKit (= 2.3.1)
-  - AFNetworking/NSURLConnection (2.3.1):
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/NSURLSession (2.3.1):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (2.3.1)
-  - AFNetworking/Security (2.3.1)
-  - AFNetworking/Serialization (2.3.1)
-  - AFNetworking/UIKit (2.3.1):
-    - AFNetworking/NSURLConnection
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - AFViewShaker (0.0.2)
-  - FastAnimationWithPOP (0.0.2):
-    - pop (~> 1.0.5)
-  - Fingertips (0.3.0)
-  - pop (1.0.7)
-  - Reveal-iOS-SDK (1.0.4)
-  - SDWebImage (3.7.1):
-    - SDWebImage/Core (= 3.7.1)
-  - SDWebImage/Core (3.7.1)
+  - Fingertips (0.4.0)
+  - ReactiveCocoa (2.2.4):
+    - ReactiveCocoa/Core (= 2.2.4)
+    - ReactiveCocoa/no-arc (= 2.2.4)
+  - ReactiveCocoa/Core (2.2.4):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.2.4)
+  - SAMKeychain (1.5.3)
+  - SDWebImage (3.7.3):
+    - SDWebImage/Core (= 3.7.3)
+  - SDWebImage/Core (3.7.3)
 
 DEPENDENCIES:
-  - AFNetworking (~> 2.3.1)
+  - AFNetworking
   - AFViewShaker (~> 0.0.2)
-  - FastAnimationWithPOP (~> 0.0.2)
   - Fingertips
-  - Reveal-iOS-SDK
+  - ReactiveCocoa (= 2.2.4)
+  - SAMKeychain
   - SDWebImage (~> 3.7.1)
 
 SPEC CHECKSUMS:
-  AFNetworking: 6d7b76aa5d04c8c37daad3eef4b7e3f2a7620da3
-  AFViewShaker: 40bd7a2725ea81a9472134f27f0086d398d1bf91
-  FastAnimationWithPOP: 453cac7e3671d27c57db04abec4f6c08a930f413
-  Fingertips: 09d223a390349b317a51d4c941d778bdb661c4e1
-  pop: 2f14a1ea61339767af9e66741b418c831b3844df
-  Reveal-iOS-SDK: d3c8e109d42219daaa7a6e1ad2de34f0bdbb7a88
-  SDWebImage: 116e88633b5b416ea0ca4b334a4ac59cf72dd38d
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AFViewShaker: 7e4bc215ca3e92347b78da436fca74e1730b52e8
+  Fingertips: 09678a650eecad2c1733dfdd5cb4004600ce2899
+  ReactiveCocoa: 78d9d1057f6e2595a67285b5adb0c90d0fc2237c
+  SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
+  SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
 
-COCOAPODS: 0.35.0
+PODFILE CHECKSUM: e803734e3b83ec9198018ca833ad3b2e0380b6ff
+
+COCOAPODS: 1.4.0.beta.1

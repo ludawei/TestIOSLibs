@@ -1,1 +1,0 @@
-../../../FastAnimationWithPOP/FastAnimationWithPop/Core/FastAnimationProtocol.h

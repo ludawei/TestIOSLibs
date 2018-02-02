@@ -35,14 +35,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
-    [manager GET:@"http://127.0.0.1:8000/test_json" parameters:@{@"question" : @"1"} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager GET:@"http://127.0.0.1:8000/test_json" parameters:@{@"question" : @"1"} progress:nil success:^(NSURLSessionDataTask *operation, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
         
         self.contentLbl.text = [responseObject objectForKey:@"answer"];
         [self.imageview sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://127.0.0.1:8000/%@", [responseObject objectForKey:@"image"]]]];
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
     

@@ -9,6 +9,8 @@
 #import "TSAnim1ViewController.h"
 #import "TSCycleAnimView.h"
 
+#import <SAMKeychain/SAMKeychain.h>
+
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 @interface TSAnim1ViewController ()
@@ -31,6 +33,27 @@
     [self.view addSubview:pie];
     
     
+    // keychain存储UUID方式，得到用户唯一标识（不刷机、还原系统情况下）
+    NSString *boundID = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"];
+    NSString *uuid = [SAMKeychain passwordForService:[NSString stringWithFormat:@"%@-test-ldw", boundID] account:@"ludawei"];
+    if (!uuid) {
+        NSString *uuid = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+        
+        [SAMKeychain setPassword:uuid forService:[NSString stringWithFormat:@"%@-test-ldw", boundID] account:@"ludawei"];
+    }
+    
+    NSLog(@"UUID:  %@", uuid);
+//    NSError *error = nil;
+//    SAMKeychainQuery *query = [[SAMKeychainQuery alloc] init];
+//    query.service = [NSString stringWithFormat:@"%@-test-ldw", boundID];
+//    query.account = uuid;
+//    [query fetch:&error];
+//
+//    if ([error code] == errSecItemNotFound) {
+//        NSLog(@"Password not found");
+//    } else if (error != nil) {
+//        NSLog(@"Some other error occurred: %@", [error localizedDescription]);
+//    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,7 +74,7 @@
 -(IBAction)clickErrorLog
 {
     NSArray *arry=[NSArray arrayWithObject:@"sss"];
-    NSLog(@"%@",[arry objectAtIndex:1]);
+//    NSLog(@"%@",[arry objectAtIndex:1]);
 }
 
 @end

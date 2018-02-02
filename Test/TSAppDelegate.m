@@ -38,6 +38,35 @@
     NSLog(@"%.f, %.f, %.f", floorf(t), ceil(t), nearbyint(t));
     NSLog(@"%.f, %.f, %.f", floorf(t1), ceil(t1), nearbyint(t1));
     NSLog(@"%.f, %.f, %.f", floorf(t2), ceil(t2), nearbyint(t2));
+    
+    NSMutableSet *muSet = [NSMutableSet setWithCapacity:6];
+    [muSet addObject:@"对象1"];
+    [muSet addObject:@"对象1"];
+    [muSet addObject:@"对象1"];[muSet addObject:@"对象1"];
+    [muSet addObject:@"对象1"];
+    NSSet *set = [NSSet setWithObjects:@"对象2",@"对象3", @"被企鹅咬了一口", nil];
+    //添加set数据
+    [muSet unionSet:set];
+    for (NSObject *object in muSet) {
+        NSLog(@"all nuSet:%@",object);
+    }
+    NSSet *set1 = [NSSet setWithObjects:@"对象2",@"对象3", nil];
+    
+    //在muSet中删除包含set1总数据
+    [muSet minusSet:set1];
+    for (NSObject *object in muSet) {
+        NSLog(@"after minusSet:%@",object);
+    }
+    
+    if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerUserNotificationSettings:)]) {
+        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
+        [[UIApplication sharedApplication] registerForRemoteNotifications];
+    }
+    else
+    {
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
+         (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
+    }
 
 //    UIViewController *vc = self.window.rootViewController;
 //    CGRect frame = [[UIScreen mainScreen] bounds];
@@ -75,4 +104,14 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification*)notification{
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"LocalNotification" message:notification.alertBody delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+    [alert show];
+    
+    NSDictionary* dic = [[NSDictionary alloc]init];
+    //这里可以接受到本地通知中心发送的消息
+    dic = notification.userInfo;
+    NSLog(@"user info = %@",[dic objectForKey:@"key"]);
+}
 @end

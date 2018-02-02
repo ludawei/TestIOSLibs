@@ -7,8 +7,6 @@
 //
 
 #import "TSAnimViewController.h"
-#import <FastAnimationWithPOP/FastAnimationWithPop.h>
-#import <POP.h>
 
 @interface TSAnimViewController ()
 
